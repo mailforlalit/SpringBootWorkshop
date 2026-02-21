@@ -36,4 +36,15 @@ public class ProductService {
         return "Product deleted successfully";
     }
 
+    public List<Product> findByCategory(String category){
+        return productRepository.findByCategory(category);
+    }
+
+    public List<Product> findByNameJPQL(String name){
+        return productRepository.findByNameJPQL(name);
+    }
+
+    public List<Product> findByName(String name){
+        return productRepository.findByName(name);
+    }
 }

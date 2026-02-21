@@ -34,4 +34,14 @@ public class ProductControllerV2 {
 		productService.updateProduct(product);
 		return "Product updated successfully";
 	}
+
+	@GetMapping("/products/search")
+	public List<Product> searchProduct(@RequestParam String name){
+		return productService.findByName(name);
+	}
+
+	@GetMapping("/products/search/jpql")
+	public List<Product> searchProductByName(@RequestParam String name){
+		return productService.findByNameJPQL(name);
+	}
 }
