@@ -1,3 +1,4 @@
+# ---------- Build Stage ------------
 FROM eclipse-temurin:25-jdk AS build
 
 # installing maven
