@@ -1,7 +1,6 @@
-# ---------- Build Stage ----------
 FROM eclipse-temurin:25-jdk AS build
 
-# Install Maven manually in case CI/CD base image doesn’t include it
+# installing maven
 RUN apt-get update && apt-get install -y maven && rm -rf /var/lib/apt/lists/*
 
 # Set working directory
@@ -32,3 +31,5 @@ EXPOSE 8081
 
 # Run the Spring Boot app
 ENTRYPOINT ["java", "-jar", "app.jar"]
+
+
